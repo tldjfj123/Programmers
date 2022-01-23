@@ -1,5 +1,3 @@
-msg = 'ABABABABABABABAB'
-
 def solution(msg):
     table = dict()
     res = []
@@ -11,7 +9,6 @@ def solution(msg):
     
     length = 1
     while len(msg) != 0 :
-        print(res)
         if msg[:length] in table.keys() and msg[:length+1] not in table.keys() :
             res.append(table[msg[:length]])
             table[msg[:length+1]] = max(table.values())+1
@@ -23,5 +20,3 @@ def solution(msg):
                 msg = ""
             length += 1
     return res
-solution(msg)
-         
